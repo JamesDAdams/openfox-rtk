@@ -1,0 +1,39 @@
+{
+  "name": "openfox-rtk",
+  "version": "1.0.0",
+  "description": "RTK token optimization and command rewrite plugin for OpenFox",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --passWithNoTests"
+  },
+  "openfox": {
+    "apiVersion": 2,
+    "displayName": "RTK Token Optimizer",
+    "description": "Reduce token consumption by filtering and rewriting shell command output through RTK (Rust Token Killer).",
+    "icon": "https://avatars.githubusercontent.com/u/258253854?s=60&v=4",
+    "logo": "https://avatars.githubusercontent.com/u/258253854?s=60&v=4",
+    "entry": "./dist/index.js",
+    "capabilities": [
+      "settings",
+      "rpc",
+      "tools",
+      "ui"
+    ],
+    "timeoutMs": 15000
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "tsup": "^8.4.0",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.0"
+  }
+}
